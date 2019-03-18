@@ -26,3 +26,8 @@ fs.access(constant.FILE, fs.constants.F_OK | fs.constants.W_OK, (err) => {
 // console.log('new chunk received: ========= ');
 // writeStream.write(chunk);
 // });
+
+module.exports = {
+    readStream : readStream,
+    writeStream : writeStream
+}
