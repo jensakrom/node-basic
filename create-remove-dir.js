@@ -1,8 +1,6 @@
 const fs = require('fs');
 const constant = require('./constant');
 
-
-
 // Check if the file exists in the current directory, and if it is writable. (Asyncronous methode)
 fs.access(constant.FILE, fs.constants.F_OK | fs.constants.W_OK, (err) => {
     if (err) {
