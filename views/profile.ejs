@@ -1,0 +1,38 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Profile </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body{
+            background: skyblue;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: aliceblue;
+            padding: 30px;
+        }
+
+        h1{
+            font-size: 48px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-align: center;
+         }
+
+         p{
+             font-size: 16px;
+             text-align: center;
+         }
+    </style>
+</head>
+
+<body>
+    <h1>Welcome to the profile of <%= person %></h1>
+    <p>Age : <%= data.age %></p>
+    <p>Jobs : <%= data.job %></p>
+</body>
+
+</html>

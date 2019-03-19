@@ -3,7 +3,7 @@ const fs = require('fs');
 const hostname = '127.0.0.1';
 const port = '3000';
 const constant = require('./constant');
-const pathHtml = '/view/index.html';
+const pathHtml = '/views/index.html';
 
 // Read plain/text
 // const readStream = fs.createReadStream(__dirname + constant.READ_ME, 'utf8');
@@ -19,7 +19,7 @@ const server = http.createServer((req, res) => {
     // res.writeHead(200, {'Content-type':'text/plain'});
 
     // Write index html
-    res.writeHead(200, {'Content-type':'text/html'});
+    // res.writeHead(200, {'Content-type':'text/html'});
 
     // Write json
     res.writeHead(200, {'Content-type':'application/json'});

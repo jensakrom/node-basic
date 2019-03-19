@@ -10,13 +10,13 @@ if(req.url === '/home' || req.url === '/'){
     res.statusCode = '200';
     res.setHeader('Content-type', 'text/html');
     // res.writeHead(200, {'Content-type' : 'text/html'});
-    const readStream = fs.createReadStream(__dirname + '/view/index.html', 'utf8');
+    const readStream = fs.createReadStream(__dirname + '/views/index.html', 'utf8');
     readStream.pipe(res);
 } else if(req.url === '/contact'){
     res.statusCode = '200';
     res.setHeader('Content-type', 'text/html');
     // res.writeHead(200, {'Content-type' : 'text/html'});
-    const readStreamContact = fs.createReadStream(__dirname + '/view/contact.html', 'utf8');
+    const readStreamContact = fs.createReadStream(__dirname + '/views/contact.html', 'utf8');
     readStreamContact.pipe(res);
 } else if (req.url ==='/api/name'){
     res.statusCode = '200';
@@ -29,7 +29,7 @@ if(req.url === '/home' || req.url === '/'){
     res.statusCode = '404';
     res.setHeader('Content-type', 'text/html');
     // res.writeHead(404, {'Content-type' : 'text/html'});
-    const readStreamNotFound = fs.createReadStream(__dirname + '/view/notFound.html', 'utf8');
+    const readStreamNotFound = fs.createReadStream(__dirname + '/views/notFound.html', 'utf8');
     readStreamNotFound.pipe(res);
 }
 })
