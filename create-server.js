@@ -20,11 +20,25 @@ const server = http.createServer((req, res) => {
 
     // Write index html
     res.writeHead(200, {'Content-type':'text/html'});
+
+    // Write json
+    res.writeHead(200, {'Content-type':'application/json'});
     
     // Add stream chunk to pipe and send to browser (write text palin and html)
-    readStream.pipe(res);
-    readStream.pipe(writeStream);
+    // readStream.pipe(res);
+    // readStream.pipe(writeStream);
     // res.end('Hallo...')
+
+    // send json to browser
+
+    const myObj = {
+        name : 'Ryue',
+        job : 'Ninja',
+        age : 29
+    }
+
+    res.end(JSON.stringify(myObj));
+
 
 });
 
