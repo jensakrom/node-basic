@@ -12,6 +12,10 @@ app.get('/contact', (req, res) => {
     res.send('This is contact');
 })
 
+app.get('/profile/:id', (req,res) => {
+    res.send('your access profile with id ' + req.params.id);
+});
+
 
 app.listen(port, hostname, () => {
     console.log(`Server running at http://${hostname}:${port}/`);
