@@ -16,9 +16,10 @@ app.get('/contact', (req, res) => {
 
 app.get('/profile/:name', (req,res) => {
     const data = {
-        name : 'Ryue',
+        name : 'Ryu',
         job : 'Ninja',
-        age : 29
+        age : 29, 
+        hobbies: ['Eating', 'Fishing', 'Fighting', 'Ngising']
     }
     res.render('profile', {person: req.params.name, data: data});
 });

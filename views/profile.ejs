@@ -22,6 +22,13 @@
             text-align: center;
          }
 
+         h2{
+            font-size: 38px;
+            text-transform: uppercase;
+            /* letter-spacing: 2px; */
+            /* text-align: center; */
+         }
+
          p{
              font-size: 16px;
              text-align: center;
@@ -31,8 +38,15 @@
 
 <body>
     <h1>Welcome to the profile of <%= person %></h1>
-    <p>Age : <%= data.age %></p>
-    <p>Jobs : <%= data.job %></p>
+    <p><strong>Age: </strong> <%= data.age %></p>
+    <p><Strong>Jobs: </Strong> <%= data.job %></p>
+    <h2> Hobbies: 
+        <ul>
+            <% data.hobbies.forEach((item) => { %>
+                <li><%= item%></li>
+           <% })%>
+        </ul>
+    </h2>
 </body>
 
 </html>
