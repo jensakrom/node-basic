@@ -61,7 +61,7 @@ h1{
     vertical-align:middle;
   }	
 
-  div#contact-form {
+  div#form-wrapper {
     position:absolute;
     top:50%;
     right:0;
