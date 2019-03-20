@@ -13,7 +13,18 @@
 <body>
     <% include partials/nav.ejs %>
     <h1>Contact us</h1>
-    <p>contact us for create best application</p>
+    <p>Contact us for create best application</p>
+    <div id="form-wrapper" style="text-align:center; vertical-align:middle">
+    <form id="contact-form" method="POST" action="/contact">
+        <label for="who">Who do you want to contact</label><br>
+        <input type="text" name="who" value="<%= qs.who %>"><p>
+        <label for="department">Which departemet?</label><br>
+        <input type="text" name="department" value="<%= qs.department %>"><p>
+        <label for="email">Your email</label><br>
+        <input type="email" name="email"><p>
+        <input type="submit" value="submit">
+    </form>
+    </div>
 </body>
 
 </html>

@@ -2,7 +2,9 @@ const express = require('express');
 const app = express();
 const port = '3001';
 const hostname = '127.0.0.1';
+const bodyParser = require('body-parser');
 
+const urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 app.set('view engine', 'ejs');
 app.use('/assets', express.static('assets'))
@@ -13,8 +15,14 @@ app.get('/', (req, res) => {
 });
 
 app.get('/contact', (req, res) => {
+    console.log(req.query);
     // res.sendFile(__dirname + '/views/contact.html');
-    res.render('contact');
+    res.render('contact', {qs: req.query});
+})
+
+app.post('/contact', urlencodedParser, (req, res) => {
+    console.log(req.body);
+    res.render('contact-success', {data: req.body});
 })
 
 app.get('/profile/:name', (req,res) => {

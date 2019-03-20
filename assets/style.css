@@ -55,6 +55,19 @@ h1{
     color: #444;
     cursor: default;
   }
+
+  .parentContainer{
+    display:table-cell;
+    vertical-align:middle;
+  }	
+
+  div#contact-form {
+    position:absolute;
+    top:50%;
+    right:0;
+    left:0;
+}
+  
    
   @media screen and (min-width: 600px) {
     .nav li {
